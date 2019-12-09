@@ -45,12 +45,12 @@ public class HomePageTest extends TestBase{
 	public void HomePageLogoTest() {
 		boolean flag= hp.validateVicksLogoImage();
 		Assert.assertTrue(flag);
-	}
+	}*/
 	
 	@Test(priority =3)
 	public void HomePageLogoTitle() {
 		System.out.println(hp.validateLogoImageTitle());
-	}*/
+	}
 	
 	@Test(enabled=false )
 	public void verifyLanguageSelection() {
