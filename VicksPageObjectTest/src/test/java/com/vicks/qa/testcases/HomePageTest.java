@@ -68,6 +68,7 @@ public class HomePageTest extends TestBase{
 		//tsul.switchToFrame();
 		Assert.assertEquals(actualTitle, prop.getProperty("contactUsPageTitle"), prop.getProperty("titleError"));
 	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
