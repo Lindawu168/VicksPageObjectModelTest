@@ -6,3 +6,4 @@ Using Page Object Module e.g.
 2. Based Class -- Initialization method to initialize WebDriver driver in the specified browser
 3. Page Class -- Each page is defined in a class object to save the Elements and action methods on the associated page;
 4. Test Class -- Each page has a related test class to save all tests which are in that particular page.
+5. Properties -- To save all Properties value which is using for all classes
