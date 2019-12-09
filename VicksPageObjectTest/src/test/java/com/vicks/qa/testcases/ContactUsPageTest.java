@@ -1,0 +1,62 @@
+package com.vicks.qa.testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.sun.istack.internal.logging.Logger;
+import com.vicks.qa.base.TestBase;
+import com.vicks.qa.pages.ContactUsPage;
+import com.vicks.qa.pages.HomePage;
+
+
+public class ContactUsPageTest extends TestBase{
+	 /* What is log?: capturing info/activities at the time of program execution.
+	  * types of logs:
+	  * 1. info;
+	  * 2. warn;
+	  * 3. error;
+	  * 4. fatal
+	  * 
+	  * How to generate the logs? : use Apache log4j API;
+	  * How it works?  it reads log4j configuration from log4j.properties file
+	  * where to create: create inside resources folder 
+	  * New--> sources folder --> "src/main/resources"
+	  * In this new folder --> New--> File -->"log4j.properties"
+	  */
+	
+	
+	ContactUsPage ctp;
+	HomePage hp;
+	
+	Logger log=Logger.getLogger(ContactUsPage.class);
+	
+	public ContactUsPageTest() {
+		super();
+	}
+	
+
+	@BeforeMethod
+	public void setUp() {
+		
+		initialization();
+		ctp=new ContactUsPage();
+		
+		 ctp= hp.clickOnContactUsLink();
+		 
+		 log.info("start");
+	}
+	
+	@Test(priority =1)
+	public void ContactUsTitleTest() {
+		String title = ctp.verifyContactUsPageTitle();
+		Assert.assertEquals(title, prop.getProperty("contactUsPageTitle"));
+	}
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+}

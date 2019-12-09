@@ -1,11 +1,13 @@
 package com.vicks.qa.base;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,10 +17,13 @@ import com.vicks.qa.util.TestUtil;
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
+	public static Logger log;
 	
 	public TestBase() {
 		try{
-			FileReader ir= new FileReader("C:\\Users\\Windows\\eclipse-workspace\\VicksPageObjectTest\\src\\main\\java\\com\\vicks\\qa\\config\\config.properties");
+			
+			String filePath= new File("").getAbsolutePath();
+			FileReader ir= new FileReader(filePath+"/src/main/java/com/vicks/qa/config/config.properties");
 			prop = new Properties();
 			prop.load(ir);
 			
