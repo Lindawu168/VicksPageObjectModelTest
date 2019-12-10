@@ -27,8 +27,10 @@ public class ContactUsPageTest extends TestBase{
 	  */
 	
 	
-	ContactUsPage ctp;
+	
 	HomePage hp;
+	ContactUsPage ctp;
+	
 	
 	Logger log=Logger.getLogger(ContactUsPage.class);
 	
@@ -41,19 +43,23 @@ public class ContactUsPageTest extends TestBase{
 	public void setUp() {
 		
 		initialization();
-		ctp=new ContactUsPage();
-		
+		hp= new HomePage();
 		 ctp= hp.clickOnContactUsLink();
 		 
-		 log.info("start");
+		// log.info("start");
 	}
 	
-	@Test(priority =1)
+	@Test(enabled=false)
 	public void ContactUsTitleTest() {
 		String title = ctp.verifyContactUsPageTitle();
 		Assert.assertEquals(title, prop.getProperty("contactUsPageTitle"));
 	}
 	
+	@Test(priority=2)
+	public void validateSearchFunction() {
+		boolean result=ctp.searchText(prop.getProperty("searchValue"));
+		Assert.assertTrue(result);
+	}
 	
 	@AfterMethod
 	public void tearDown() {
