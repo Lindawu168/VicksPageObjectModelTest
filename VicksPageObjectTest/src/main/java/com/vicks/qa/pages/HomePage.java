@@ -1,10 +1,13 @@
 package com.vicks.qa.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.vicks.qa.base.TestBase;
@@ -69,31 +72,46 @@ public class HomePage extends TestBase {
 	public void setSearchingValue(String sItem) {
 		searchBox.sendKeys(sItem);
 	}
+	
+	
 //Page navigations
 	public ContactUsPage clickOnContactUsLink() {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		contactUsLink = wait.until(ExpectedConditions.elementToBeClickable(contactUsLink));
-		contactUsLink.click();
+		clickOn(driver, contactUsLink, 10);
 		return new ContactUsPage();
 	}
 	public ShopProductsPage clickOnshopProductsLink() {
-		shopProductsLink.click();
+		clickOn(driver, shopProductsLink, 10);
 		return new ShopProductsPage();
 	}
 	public SymptomsPage clickOnsymptomsLink() {
-		symptomsLink.click();
+		clickOn(driver, symptomsLink, 10);
 		return new SymptomsPage();
 	}
 	public TreatMentsPage clickOntreamentsLink() {
-		treamentsLink.click();
+		clickOn(driver, treamentsLink, 10);
 		return new TreatMentsPage();
 	}
 	public Safety_FAQsPage safetyFaqsLink() {
-		safetyFaqsLink.click();
+		clickOn(driver, safetyFaqsLink, 10);
 		return new Safety_FAQsPage();
 	}
 	public VicksHistoryPage historyLink() {
-		historyLink.click();
+		clickOn(driver, historyLink, 10);
 		return new VicksHistoryPage();
 	}
+
+	public void printOutLinksText() {
+		List<WebElement> linklist = driver.findElements(By.tagName("a"));
+
+		int lsize = linklist.size();
+		System.out.println("Total links number is " + lsize);
+		for (int i = 0; i < lsize; i++) {
+			try{
+			System.out.println(linklist.get(i).getText());
+			}catch(StaleElementReferenceException e) {
+				e.printStackTrace();;
+			}
+		}
+	}
+	
 }

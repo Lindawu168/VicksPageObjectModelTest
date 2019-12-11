@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.vicks.qa.testcases.ContactUsPageTest">
+      <class name="com.vicks.qa.testcases.HomePageTest">
         <methods>
-          <include name="validateSearchFunction"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="testPrintOutAllLinkText"/>
         </methods>
-      </class> <!-- com.vicks.qa.testcases.ContactUsPageTest -->
+      </class> <!-- com.vicks.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

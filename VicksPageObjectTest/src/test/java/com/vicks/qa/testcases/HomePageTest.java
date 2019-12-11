@@ -1,5 +1,9 @@
 package com.vicks.qa.testcases;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -45,7 +49,7 @@ public class HomePageTest extends TestBase{
 	public void HomePageLogoTest() {
 		boolean flag= hp.validateVicksLogoImage();
 		Assert.assertTrue(flag);
-	}*/
+	}
 	
 	@Test(priority =3)
 	public void HomePageLogoTitle() {
@@ -61,12 +65,17 @@ public class HomePageTest extends TestBase{
 	
 	}
 	
-	@Test
+	@Test (enabled=false )
 	public void verifyNavigationtoContactUsPage() {
 		hp.clickOnContactUsLink();
 	String actualTitle = driver.getTitle();
 		//tsul.switchToFrame();
 		Assert.assertEquals(actualTitle, prop.getProperty("contactUsPageTitle"), prop.getProperty("titleError"));
+	}*/
+	
+	@Test
+	public void testPrintOutAllLinkText() {
+		hp.printOutLinksText();
 	}
 	
 	@AfterMethod
