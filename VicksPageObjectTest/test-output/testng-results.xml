@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34773" started-at="2019-12-11T15:22:24Z" finished-at="2019-12-11T15:22:59Z">
+  <suite name="Default suite" duration-ms="39597" started-at="2019-12-11T15:49:21Z" finished-at="2019-12-11T15:50:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34773" started-at="2019-12-11T15:22:24Z" finished-at="2019-12-11T15:22:59Z">
+    <test name="Default test" duration-ms="39597" started-at="2019-12-11T15:49:21Z" finished-at="2019-12-11T15:50:01Z">
       <class name="com.vicks.qa.testcases.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.vicks.qa.testcases.HomePageTest@4883b407]" name="setUp" is-config="true" duration-ms="23228" started-at="2019-12-11T10:22:24Z" finished-at="2019-12-11T10:22:47Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.vicks.qa.testcases.HomePageTest@42e26948]" name="setUp" is-config="true" duration-ms="22293" started-at="2019-12-11T10:49:21Z" finished-at="2019-12-11T10:49:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testPrintOutAllLinkText()[pri:0, instance:com.vicks.qa.testcases.HomePageTest@4883b407]" name="testPrintOutAllLinkText" duration-ms="9865" started-at="2019-12-11T10:22:47Z" finished-at="2019-12-11T10:22:57Z">
+        <test-method status="PASS" signature="testPrintOutAllLinkText()[pri:0, instance:com.vicks.qa.testcases.HomePageTest@42e26948]" name="testPrintOutAllLinkText" duration-ms="15614" started-at="2019-12-11T10:49:44Z" finished-at="2019-12-11T10:49:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPrintOutAllLinkText -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.vicks.qa.testcases.HomePageTest@4883b407]" name="tearDown" is-config="true" duration-ms="1563" started-at="2019-12-11T10:22:57Z" finished-at="2019-12-11T10:22:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.vicks.qa.testcases.HomePageTest@42e26948]" name="tearDown" is-config="true" duration-ms="1588" started-at="2019-12-11T10:49:59Z" finished-at="2019-12-11T10:50:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
