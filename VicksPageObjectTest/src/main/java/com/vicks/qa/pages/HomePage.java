@@ -47,6 +47,9 @@ public class HomePage extends TestBase {
 
 	@FindBy(xpath = "//a[text()='Canada - English']")
 	WebElement languageS;
+	
+	@FindBy(tagName="a")
+	List <WebElement> linkEs;
 
 	// Actions
 	public String validateHomePageTitle() {
@@ -101,13 +104,13 @@ public class HomePage extends TestBase {
 	}
 
 	public void printOutLinksText() {
-		List<WebElement> linklist = driver.findElements(By.tagName("a"));
+		//List<WebElement> linklist = driver.findElements(By.tagName("a"));
 
-		int lsize = linklist.size();
+		int lsize = linkEs.size();
 		System.out.println("Total links number is " + lsize);
 		for (int i = 0; i < lsize; i++) {
 			try{
-			System.out.println(linklist.get(i).getText());
+			System.out.println(linkEs.get(i).getText());
 			}catch(StaleElementReferenceException e) {
 				e.printStackTrace();;
 			}
