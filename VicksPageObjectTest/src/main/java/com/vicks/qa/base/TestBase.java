@@ -43,7 +43,7 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Windows\\eclipse\\libs\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:/Users/mac/git/VicksPageObjectModelTest/VicksPageObjectTest/src/main/resources/chromedriver.exe");
 			driver= new ChromeDriver();
 		}else if (browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Windows\\eclipse\\libs\\geckodriver-v0.14.0-win64\\geckodriver.exe");
